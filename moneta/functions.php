@@ -140,10 +140,19 @@ add_action( 'widgets_init', 'moneta_widgets_init' );
  * Enqueue scripts and styles.
  */
 function moneta_scripts() {
-	wp_enqueue_style( 'moneta-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'moneta-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'moneta-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	// wp_enqueue_style( 'moneta-style', get_stylesheet_uri(), array(), _S_VERSION );
+	// wp_style_add_data( 'moneta-style', 'rtl', 'replace' );
+
+
+	// Enqueue Google fonts
+	wp_enqueue_style( 'moneta-fonts-temp', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap/', array(), null );
+	// Main style temp
+	wp_enqueue_style( 'moneta-style-temp', get_template_directory_uri() . '/assets/css/style.css', array(), filemtime(get_template_directory() . '/assets/css/style.css') );
+
+	wp_enqueue_script( 'moneta-navigation', get_template_directory_uri() . '/js/navigation.js?2', array(), _S_VERSION, true );
+
+	// wp_enqueue_script( 'market-rates-js-temp', get_template_directory_uri() . '/assets/js/exchange.js?22', array('jquery'), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
