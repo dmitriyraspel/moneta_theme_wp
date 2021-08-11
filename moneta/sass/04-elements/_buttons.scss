@@ -1,0 +1,138 @@
+button,
+.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	display: inline-block;
+	min-height: 40px;
+	padding: $button-padding;
+	font-size: $button-font-size;
+	line-height: $button-line-height;
+	border: 1px solid $button-border-color;
+	color: $button-color;
+	font-weight: $bold;
+	white-space: nowrap;
+	cursor: pointer;
+	background-color: $button-background-color;
+	border-radius: $button-border-radius;
+	margin-bottom: 1.3em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.7s;
+
+	&:hover,&:focus{
+		outline: 0;
+	}
+
+	@include desktop{
+		&:hover{
+			background-color: $button-background-color-hover;
+			border-color: $button-border-color-hover;
+		}
+	}
+}
+
+// .button__primary {
+// 	background-color: $gold;
+// 	border-color: $gold;
+// 	color: #fff;
+
+// 	@include desktop{
+// 		&:hover{
+// 			background-color: $gold-dark;
+// 			border-color: $gold-dark;
+// 			color: #fff;
+// 		}
+// 	}
+// }
+
+.button__accent{
+	background-color: $accent;
+	border-color: $accent;
+	color: #fff;
+
+	@include desktop{
+		&:hover{
+			background-color: darken($accent,4%);
+			border-color: darken($accent,4%);
+			color: #fff;
+		}
+	}
+}
+
+.button__delete{
+	background-color: $error;
+	border-color: $error;
+	color: #fff;
+
+	@include desktop{
+		&:hover{
+			background-color: darken($error,4%);
+			border-color: darken($error,4%);
+			color: #fff;
+		}
+	}
+}
+
+.button:disabled{
+	opacity: 0.25;
+	cursor: default;
+	pointer-events:none;
+}
+
+// Utility classes
+.button--fixed{
+	width: 160px;
+}
+
+.button--fixed2{
+	width: 220px;
+}
+
+.button-max {
+	width: 100%;
+}
+
+.button-icon,
+.btn-icon {
+	width: 24px;
+	height: 24px;
+	position: relative;
+	display: inline-block;
+	border: none;
+	background: transparent;
+	font-size: 0px;
+	overflow: hidden;
+	padding: 0;
+	text-decoration: none;
+
+	&::after {
+		position: absolute;
+		content: "";
+		top: 2px;
+		left: 2px;
+		width: 20px;
+		height: 20px;
+		background: #ccc;
+	}
+}
+
+// .add-to-cart {
+// 	display: inline-block;
+// 	text-align: center;
+// 	border-radius: 18px;
+// 	color: #fff;
+// 	font-size: 16px;
+// 	font-weight: bold;
+// 	background: $gold;
+// 	border: 1px solid $gold;
+// 	height: 36px;
+// 	width: 160px;
+// 	padding: 4px 10px;
+// 	text-transform: uppercase;
+// 	font-family: inherit;
+// 	&:hover {
+// 		color: #fff;
+// 	}
+// }

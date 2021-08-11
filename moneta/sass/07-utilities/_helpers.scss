@@ -1,0 +1,43 @@
+.margin-right{
+	margin-right: 8pt;
+}
+.mt-0 {
+	margin-top: 0;
+}
+.not-mobile {
+	@media (max-width: #{$desktop-width}) {
+		display: none!important;
+    }
+}
+
+.only-mobile {
+	@media (min-width: #{$desktop-width}) {
+		display: none!important;
+    }
+}
+.background-dark {
+	background-color: $background-dark;
+}
+
+.invalid {
+	color: $error;
+}
+.helper-text {
+	display: none;
+}
+.helper-text.invalid {
+	display: block;
+}
+a.label {
+	display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 0.9em;
+	border-bottom: 1px dotted $gold;
+}
+.bottom-dotted {
+	border-bottom: 1px dotted $gold;
+}
+.font-normal {
+	font-weight: $normal;
+}
