@@ -17,20 +17,18 @@
  * @return void
  */
 function moneta_woocommerce_setup() {
-	add_theme_support(
-		'woocommerce',
-		array(
-			'thumbnail_image_width' => 150,
-			'single_image_width'    => 300,
-			'product_grid'          => array(
-				'default_rows'    => 3,
-				'min_rows'        => 1,
-				'default_columns' => 4,
-				'min_columns'     => 1,
-				'max_columns'     => 6,
-			),
+	add_theme_support( 'woocommerce', apply_filters( 'moneta_woocommerce_args', array(
+		'single_image_width'    => 750,
+		'thumbnail_image_width' => 350,
+		'product_grid'          => array(
+			'default_columns' => 4,
+			'default_rows'    => 3,
+			'min_columns'     => 1,
+			'max_columns'     => 6,
+			'min_rows'        => 1
 		)
-	);
+	) ) );
+
 	add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' );
