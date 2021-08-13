@@ -4,7 +4,12 @@
 	margin: 0 auto;
 	position: relative;
 }
-
+.content-container {
+	width: $containerWidth;
+	max-width: $content-width;
+	margin-left: auto;
+	margin-right: auto;
+}
 .row{
 	display: block;
 	width: 100%;

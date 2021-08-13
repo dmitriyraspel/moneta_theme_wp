@@ -1,7 +1,15 @@
+.comments-area {
+	@include container-content;
+	margin-bottom: 30px;
+}
 .comment-content a {
 	word-wrap: break-word;
 }
 
 .bypostauthor {
 	display: block;
+}
+.comments-title,
+.comment-reply-title {
+	color: $text;
 }

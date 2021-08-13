@@ -3,7 +3,11 @@
 .post-navigation {
 
 	.site-main & {
-		margin: 0 0 1.5em;
+		margin: 0 auto 20px;
+		max-width: $content-width;
+		@media (min-width: $desktop-width) {
+			margin-bottom: 30px;
+		}
 	}
 
 	.nav-links {
@@ -17,5 +21,10 @@
 	.nav-next {
 		text-align: end;
 		flex: 1 0 50%;
+	}
+}
+.post-navigation {
+	a {
+		border-bottom: 1px dotted $gold;
 	}
 }

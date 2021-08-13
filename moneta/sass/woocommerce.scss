@@ -3,19 +3,25 @@ Theme Name: moneta
 
 WooCommerce styles override
 */
+@import "01-settings/variables";
+
+@import "02-tools/structure";
+@import "02-tools/columns";
+@import "02-tools/mixins";
 
 // WooCommerce color variables
-$woocommerce__color-error: #e2401c;
-$woocommerce__color-success: #0f834d;
-$woocommerce__color-info: #3d9cd2;
+$woocommerce__color-error: $error;
+$woocommerce__color-success: $success;
+$woocommerce__color-info: #8abb19;
 
-// Import variables and mixins
-// @import "abstracts/abstracts";
+
+@import "plugins/woocommerce/woocommerce-breadcrumb";
+@import "plugins/woocommerce/woocommerce-pagination";
 
 /**
  * Shop tables
  */
-// @import "plugins/woocommerce/tables";
+@import "plugins/woocommerce/tables";
 
 /**
  * Products

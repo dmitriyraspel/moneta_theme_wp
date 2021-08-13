@@ -1,0 +1,11 @@
+.site-main {
+    min-height: calc(100vh - 366px);
+    
+    @media (min-width: 720px) {
+        min-height: calc(100vh - 290px);
+    }
+    
+    @media (min-width: $desktop-width) {
+        min-height: calc(100vh - 219px);
+    }
+}

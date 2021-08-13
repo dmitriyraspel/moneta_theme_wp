@@ -1,0 +1,75 @@
+.sticky {
+	display: block;
+}
+
+.post {
+	margin-bottom: 20px;
+	@media (min-width: $desktop-width) {
+		margin-bottom: 30px;
+    }
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+a.post-thumbnail {
+	display: block;
+}
+.entry-header,
+.post-thumbnail,
+.entry-footer,
+.entry-summary {
+    @include container-content
+}
+
+.entry-title {
+	@media (min-width: $desktop-width) {
+		font-size: 30px;
+    }
+	a {
+		color: $text-dark;
+	}
+}
+
+.entry-meta,
+.entry-footer {
+	&> span {
+		display: inline-block;
+		margin-right: 20px; 
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	&> span >* {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.svg-icon {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 4px;
+	} 
+}
+.entry-footer {
+	margin-top: 30px;
+	@media (min-width: $desktop-width) {
+		margin-top: 40px;
+    }
+}
+.page-header {
+	@include container;
+	margin-top: 30px;
+}

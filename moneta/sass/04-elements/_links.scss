@@ -2,6 +2,8 @@ a {
 	color: $color__link;
 	outline: 0;
 	outline: transparent;
+	transition: $base-transition;
+	text-decoration: none;
 
 	&:visited {
 		color: $color__link-visited;

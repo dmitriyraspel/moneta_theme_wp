@@ -11,7 +11,7 @@ $background: #ffffff;
 $background-alt: #f7f7f7;
 $background-dark: #242633;
 $line: #eee;
-$success: $gold;
+$success: #06d19c;
 $error: tomato;
 
 $color__background-screen: #f1f1f1;
@@ -20,12 +20,14 @@ $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
 $color__text-screen: #21759b;
-$color__link: #4169e1; //royalblue
-$color__link-visited: #800080; //purple
-$color__link-hover: #191970; //midnightblue
-$color__text-main: #404040;
+$color__link: $text;
+$color__link-visited: #999; //purple
+$color__link-hover: $gold; //midnightblue
 
 $color__border-abbr: #666;
+
+$color__social-link: $gold;
+$color__social-link-hover: $gold-dark;
 
 // Buttons
 $button-font-size: 16px;
@@ -75,15 +77,19 @@ $font__pre: "Courier 10 Pitch", courier, monospace;
 $radius: 20px;
 $box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
 $radius-block: 10px;
+$base-transition: 0.7s;
 
 // Containers
-$containerWidth: 88%; // Percentage of screen width
-$containerMax: 1080px; // Largest fixed width
+$containerWidth: 90%; // Percentage of screen width
+$containerMax: 1180px; // Largest fixed width
 $text-container: 640px; // Limit texts for readability
+$content-width: 720px;
 
 // Media queries
 $tablet-width: 760px !default; // Tablets
 $desktop-width: 992px !default; // Desktops & Laptops
 $huge-width: 1400px !default; // Large Desktops
 
-/* Components */
+/* Spacing */
+$spacing-horizontal: 15px;
+$spacing-vertical: 20px;
