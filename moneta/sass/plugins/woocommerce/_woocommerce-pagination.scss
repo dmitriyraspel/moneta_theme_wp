@@ -1,0 +1,27 @@
+.woocommerce-pagination {
+    max-width: $content-width;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: $text;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline;
+        margin: 0 8px 0 0 ;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    a {
+        color: $text;
+    }
+    .current {
+        color: $text-dark;
+    }
+}
