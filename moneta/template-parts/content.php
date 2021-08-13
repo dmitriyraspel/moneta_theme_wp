@@ -22,8 +22,8 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				moneta_posted_on();
-				moneta_posted_by();
+				// moneta_posted_on();
+				// moneta_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -58,6 +58,13 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php moneta_entry_footer(); ?>
+		<?php architect_posted_by(); ?>
+		<?php architect_posted_on(); ?>
+		<?php architect_category_list(); ?>
+		<?php moneta_comment_link(); ?>
+	
+		<?php moneta_tag_list(); ?>
+	
+		<?php // moneta_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
