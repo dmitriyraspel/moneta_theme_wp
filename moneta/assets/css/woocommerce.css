@@ -3,9 +3,109 @@ Theme Name: moneta
 
 WooCommerce styles override
 */
+/* Spacing */
+.woocommerce-breadcrumb {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 1180px;
+  font-size: 14px;
+  color: #666;
+}
+
+.woocommerce-breadcrumb a {
+  color: #666;
+}
+
+.woocommerce-pagination {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #666;
+}
+
+.woocommerce-pagination ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.woocommerce-pagination li {
+  display: inline;
+  margin: 0 8px 0 0;
+}
+
+.woocommerce-pagination li:last-child {
+  margin-right: 0;
+}
+
+.woocommerce-pagination a {
+  color: #666;
+}
+
+.woocommerce-pagination .current {
+  color: #111;
+}
+
 /**
  * Shop tables
  */
+table.shop_table_responsive thead {
+  display: none;
+}
+
+table.shop_table_responsive tbody th {
+  display: none;
+}
+
+table.shop_table_responsive tr td {
+  display: block;
+  text-align: right;
+  clear: both;
+}
+
+table.shop_table_responsive tr td::before {
+  content: attr(data-title) ": ";
+  float: left;
+}
+
+table.shop_table_responsive tr td.product-remove a {
+  text-align: left;
+}
+
+table.shop_table_responsive tr td.product-remove::before {
+  display: none;
+}
+
+table.shop_table_responsive tr td.actions::before, table.shop_table_responsive tr td.download-actions::before {
+  display: none;
+}
+
+table.shop_table_responsive tr td.download-actions .button {
+  display: block;
+  text-align: center;
+}
+
+@media screen and (min-width: 48em) {
+  table.shop_table_responsive thead {
+    display: table-header-group;
+  }
+  table.shop_table_responsive tbody th {
+    display: table-cell;
+  }
+  table.shop_table_responsive tr th,
+  table.shop_table_responsive tr td {
+    text-align: left;
+  }
+  table.shop_table_responsive tr td {
+    display: table-cell;
+  }
+  table.shop_table_responsive tr td::before {
+    display: none;
+  }
+}
+
 /**
  * Products
  */
