@@ -10,23 +10,33 @@
  */
 
 ?>
+<footer id="colophon" class="site-footer">
+		<div class="container footer-inner">
+		
+			<div class="left footer-title">
+               GOLDTECH.MARKET 2021 ©
+            </div>
+			<div class="center">
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'moneta' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'moneta' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'moneta' ), 'moneta', '<a href="https://raspel.ru/">Dmitriy Raspel</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+			<?php
+			if ( has_nav_menu( 'social' ) ) : 
+			get_template_part( 'template-parts/social-nav' );
+			endif; 
+			?>
+	
+            </div>
+			<div class="right">
+				<ul>
+					<li><a href="#">Реквизиты и документы компании</a></li>
+					<li><a href="https://goldtech.market/privacy-policy/">Политика конфиденциальности</a></li>
+				</ul>
+            </div>
+		</div><!-- /.footer-inner -->
+	</footer><!-- .site-footer -->
+
 </div><!-- #page -->
+
+<?php get_template_part( 'template-parts/fix-menu' ); ?>
 
 <?php wp_footer(); ?>
 
