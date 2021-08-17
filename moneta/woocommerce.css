@@ -569,7 +569,7 @@ ul.products li.product .button {
 
 .star-rating::before {
   content: "";
-  background-image: url(../img/star-rating-group-100.png);
+  background-image: url(assets/img/star-rating-group-100.png);
   top: 0;
   left: 0;
   position: absolute;
@@ -850,7 +850,7 @@ p.no-comments {
   width: 15px;
   height: 15px;
   margin-right: 5px;
-  background-image: url(../img/filter-temp.png);
+  background-image: url(assets/img/filter-temp.png);
   background-size: contain;
 }
 

@@ -140,7 +140,6 @@ select{
 	color: $text;
 }
 
-// Radio => Thanks to Materialize CSS => http://materializecss.com/forms.html
 /* Remove default Radio Buttons */
 [type="radio"]:not(:checked),
 [type="radio"]:checked {

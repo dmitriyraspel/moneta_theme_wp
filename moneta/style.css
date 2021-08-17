@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 Theme Name: moneta
-Theme URI: http://underscores.me/
+Theme URI: https://github.com/dmitriyraspel/moneta_theme_wp
 Author: Dmitriy Raspel
 Author URI: https://raspel.ru/
 Description: Тема для GoldTech
@@ -11,7 +11,7 @@ Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: moneta
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
 /* Spacing */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1408,42 +1408,42 @@ select::-ms-expand {
 }
 
 .fix-menu__link-wishlist::after {
-  background: url("https://goldtech.market/wp-content/uploads/2021/07/heart-temp.png") center no-repeat;
+  background: url(assets/img/heart-temp.png) center no-repeat;
   background-size: contain;
 }
 
 .fix-menu__link-account::after {
-  background: url("https://goldtech.market/wp-content/uploads/2021/07/user-temp.png") center no-repeat;
+  background: url(assets/img/user-temp.png) center no-repeat;
   background-size: contain;
 }
 
 .fix-menu__link-cart::after {
-  background: url("https://goldtech.market/wp-content/uploads/2021/07/cart_46-41.png") center no-repeat;
+  background: url(assets/img/cart_46-41.png) center no-repeat;
   background-size: contain;
 }
 
 .fix-menu__link-catalog::after {
-  background: url("https://goldtech.market/wp-content/uploads/2021/07/katalog-temp.png") center no-repeat;
+  background: url(assets/img/katalog-temp.png) center no-repeat;
   background-size: contain;
 }
 
 .fix-menu__link-charts::after {
-  background: url("https://goldtech.market/wp-content/uploads/2021/07/charts-temp-1-1.png") center no-repeat;
+  background: url(assets/img/charts-temp-1-1.png) center no-repeat;
   background-size: contain;
 }
 
 .fix-menu__link-home::after {
-  background: url("https://goldtech.market/wp-content/uploads/2021/07/gtech-temp.png") center no-repeat;
+  background: url(assets/img/gtech-temp.png) center no-repeat;
   background-size: contain;
 }
 
 .fix-menu__link-dialer::after {
-  background: url("https://goldtech.market/wp-content/uploads/2021/07/dialer-temp-1.png") center no-repeat;
+  background: url(assets/img/dialer-temp-1.png) center no-repeat;
   background-size: contain;
 }
 
 .fix-menu__link-news::after {
-  background: url("https://goldtech.market/wp-content/uploads/2021/07/newspaper-temp.png") center no-repeat;
+  background: url(assets/img/newspaper-temp.png) center no-repeat;
   background-size: contain;
 }
 
@@ -1636,7 +1636,7 @@ select::-ms-expand {
   top: 0;
   left: 6px;
   position: absolute;
-  background: url(https://goldtech.market/wp-content/uploads/2021/07/user_24-24-temp.png) center no-repeat;
+  background: url(assets/img/user_24-24-temp.png) center no-repeat;
   background-size: contain;
 }
 
