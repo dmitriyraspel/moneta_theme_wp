@@ -5,4 +5,14 @@
 	select {
 		max-width: 100%;
 	}
+	.widget-title {
+		font-size: $font-size;
+		color: $text;
+		font-weight: $bold;
+	}
+
+	ul, ol {
+		list-style: none;
+		padding-left: 1em;
+	}
 }
