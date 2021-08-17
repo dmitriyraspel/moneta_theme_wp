@@ -170,7 +170,9 @@ function moneta_scripts() {
 
 	// wp_enqueue_script( 'moneta-navigation', get_template_directory_uri() . '/js/navigation.js?2', array(), _S_VERSION, true );
 
-	wp_enqueue_script( 'market-exchange-js', get_template_directory_uri() . '/assets/js/exchange.js?37', array('jquery'), true );
+	wp_enqueue_script( 'market-exchange-js', get_template_directory_uri() . '/assets/js/exchange.js?39', array('jquery'), true );
+	wp_enqueue_script( 'lib-chart-js', get_template_directory_uri() . '/assets/js/lib/chart.js', array('jquery'), true );
+	wp_enqueue_script( 'market-charts-js', get_template_directory_uri() . '/assets/js/charts.js?1', array('lib-chart-js'), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

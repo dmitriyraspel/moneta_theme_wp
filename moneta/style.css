@@ -2084,6 +2084,20 @@ a.post-thumbnail {
   padding-right: 12px;
 }
 
+.moneta-chart {
+  margin-bottom: 20px;
+}
+
+.moneta-chart canvas .hidden {
+  display: none;
+}
+
+.chart-trigger {
+  font-size: 12px;
+  text-transform: none;
+  height: 36px;
+}
+
 /* Jetpack infinite scroll
 --------------------------------------------- */
 /* slider */
