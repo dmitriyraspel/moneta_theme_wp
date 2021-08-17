@@ -1,0 +1,34 @@
+.price {
+    color: $text-dark;
+    
+    .woocommerce-Price-amount {
+        // display: block;
+    }
+    ins {
+        text-decoration: none;
+    }
+
+    bdi,
+    ins {
+        font-weight: $bold;
+        font-size: 16px;
+        // @media screen and (min-width: $tablet-width) {
+        //     font-size: 24px;
+        // }
+    }
+
+    del bdi{
+        font-weight: $normal;
+        font-size: 13px;
+        color: $text;
+        display: block;
+        // @media screen and (min-width: $tablet-width) {
+        //     font-size: 17px;
+        // }
+    }
+
+    .woocommerce-Price-currencySymbol {
+        margin-left: 2px;
+        // font-family: $font__system;
+    }
+}

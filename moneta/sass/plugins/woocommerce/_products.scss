@@ -1,60 +1,85 @@
 ul.products {
+	list-style: none;
 	margin: 0;
 	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-left: -15px;
 
 	li.product {
-		list-style: none;
+		list-style: none; 
 		position: relative;
-		margin-bottom: 2em;
+
+		display: flex;
+		flex-direction: column;
+		margin-left: 15px;
+		margin-bottom: 15px;
+		width: calc((100% - 30px) / 2);
+		max-width: 300px;
+		padding: 10px;
+		border-radius: 10px;
+		background: #f9f8f8;
+		
+		// @media (min-width: 600px) and (max-width: $tablet-width) {
+		// 	width: calc((100% - 45px) / 3);
+		// }
+		@media (min-width: $desktop-width) {
+			width: calc((100% - 45px) / 3);
+		}
+
+		.woocommerce-LoopProduct-link {
+			display: flex;
+			flex-direction: column;
+			// align-items: center;
+			height: 100%;
+		}
 
 		img {
 			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.woocommerce-loop-product__title {
+			font-size: 14px;
+			color: $text;
+			height: 40px;
+			max-height: 40px;
+			overflow: hidden;
+			transition: $base-transition;
+			
+			&:hover,
+			&:focus {
+				max-height: 200px;
+
+			}
+			&:visited {
+				color: $text;
+			}
+		}
+
+		.price {
+			margin-top: auto;
 		}
 
 		.button {
+			margin-top: 10px;
 			display: block;
+			// margin-top: auto;
+			font-size: 14px;
+			color: $button-color;
 		}
 	}
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: $desktop-width) {
 
 	ul.products {
 
 		li.product {
-
-			@include column-width(3);
-			float: left;
-			margin-right: $columns__margin;
-
-			&.first {
-				clear: both;
-			}
-
-			&.last {
-				margin-right: 0;
-			}
-		}
-	}
-
-	ul.products.columns-1 {
-
-		li.product {
-			float: none;
-			width: 100%;
-		}
-
-	}
-
-	@for $i from 2 through 6 {
-
-		ul.products.columns-#{$i} {
-
-			li.product {
-
-				@include column-width( $i );
-			}
-
+			
 		}
 	}
 }
+

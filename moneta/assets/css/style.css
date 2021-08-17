@@ -362,7 +362,8 @@ img, svg {
 
 /* custom scroll */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -526,7 +527,17 @@ blockquote {
 
 ul,
 ol {
-  margin: 0 0 1.5em 1.5em;
+  margin: 0 0 1em 1em;
+}
+
+ul a,
+ol a {
+  color: #666;
+}
+
+ul a:visited,
+ol a:visited {
+  color: #666;
 }
 
 ul {
@@ -610,7 +621,6 @@ input[type="submit"] {
   border: 1px solid #D1A579;
   color: #fff;
   font-weight: 700;
-  white-space: nowrap;
   cursor: pointer;
   background-color: #D1A579;
   border-radius: 20px;
@@ -620,6 +630,7 @@ input[type="submit"] {
   text-transform: uppercase;
   -webkit-transition: 0.7s;
   transition: 0.7s;
+  overflow: hidden;
 }
 
 button:hover, button:focus,
@@ -772,7 +783,7 @@ input[type="color"] {
   color: #666;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  padding: 10pt 20pt;
+  padding: 10px 20px;
   border-radius: 20px;
   background-color: #f7f7f7;
   margin-bottom: 1.4em;
@@ -835,7 +846,7 @@ select {
   color: #666;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  padding: 10pt 20pt;
+  padding: 10px 20px;
   margin-bottom: 1.4em;
   display: block;
   border-radius: 20px;
@@ -1750,6 +1761,17 @@ a.post-thumbnail {
   max-width: 100%;
 }
 
+.widget .widget-title {
+  font-size: 15px;
+  color: #666;
+  font-weight: 700;
+}
+
+.widget ul, .widget ol {
+  list-style: none;
+  padding-left: 1em;
+}
+
 /* Media */
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
@@ -2050,15 +2072,32 @@ a.post-thumbnail {
 
 /* Jetpack infinite scroll
 --------------------------------------------- */
-/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-  display: none;
+/* slider */
+.slick-slider button {
+  min-height: 12px;
 }
 
-/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
-.infinity-end.neverending .site-footer {
-  display: block;
+.slick-slider .slick-arrow:hover,
+.slick-slider .slick-arrow:focus {
+  background-color: transparent;
+}
+
+.slick-dots button,
+.slick-dots button:hover,
+.slick-dots button:focus {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #c19e6d;
+  border-radius: 50%;
+  background: #fff;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-dots li.slick-active button {
+  background: #c19e6d;
 }
 
 /*--------------------------------------------------------------

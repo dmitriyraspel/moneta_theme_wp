@@ -14,9 +14,12 @@ $woocommerce__color-error: $error;
 $woocommerce__color-success: $success;
 $woocommerce__color-info: #8abb19;
 
-
+// @import "plugins/woocommerce/alignments";
+@import "plugins/woocommerce/woocommerce-page";
 @import "plugins/woocommerce/woocommerce-breadcrumb";
 @import "plugins/woocommerce/woocommerce-pagination";
+@import "plugins/woocommerce/onsale";
+@import "plugins/woocommerce/price";
 
 /**
  * Shop tables
@@ -26,24 +29,27 @@ $woocommerce__color-info: #8abb19;
 /**
  * Products
  */
-// @import "plugins/woocommerce/products";
+@import "plugins/woocommerce/products";
 
 /**
  * Single product
  */
-// @import "plugins/woocommerce/single-product";
+@import "plugins/woocommerce/single-product";
 
 /**
  * Checkout
  */
-// @import "plugins/woocommerce/checkout";
+@import "plugins/woocommerce/checkout";
 
 /**
  * General WooCommerce components
  */
-// @import "plugins/woocommerce/components";
+@import "plugins/woocommerce/components";
+@import "plugins/woocommerce/shop";
 
 /**
  * WooCommerce widgets
  */
-// @import "plugins/woocommerce/widgets";
+@import "plugins/woocommerce/widgets";
+
+@import "plugins/woocommerce/wc-block-grid__products";
