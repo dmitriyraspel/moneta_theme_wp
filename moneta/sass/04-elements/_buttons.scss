@@ -11,7 +11,6 @@ input[type="submit"] {
 	border: 1px solid $button-border-color;
 	color: $button-color;
 	font-weight: $bold;
-	white-space: nowrap;
 	cursor: pointer;
 	background-color: $button-background-color;
 	border-radius: $button-border-radius;
@@ -20,6 +19,8 @@ input[type="submit"] {
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: 0.7s;
+	// white-space: nowrap;
+	overflow: hidden;
 
 	&:hover,&:focus{
 		outline: 0;

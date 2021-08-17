@@ -8,7 +8,7 @@ $primary-dark: darken($primary,8%);
 $text: #666;
 $text-dark: #111;
 $background: #ffffff;
-$background-alt: #f7f7f7;
+$background-alt: #f7f7f7; // fix-menu #f9f8f8
 $background-dark: #242633;
 $line: #eee;
 $success: #06d19c;
@@ -51,7 +51,7 @@ $input-border-color-hover: $gold-dark;
 $input-background: $background-alt;
 $input-background-hover: $background;
 $input-border-radius: 20px;
-$input-padding: 10pt 20pt;
+$input-padding: 10px 20px;
 
 $label-color: $text;
 $label-font-size: 14px;
