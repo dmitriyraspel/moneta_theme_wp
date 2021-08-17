@@ -18,7 +18,7 @@
  */
 function moneta_woocommerce_setup() {
 	add_theme_support( 'woocommerce', apply_filters( 'moneta_woocommerce_args', array(
-		'single_image_width'    => 750,
+		'single_image_width'    => 600,
 		'thumbnail_image_width' => 350,
 		'product_grid'          => array(
 			'default_columns' => 4,
@@ -118,9 +118,26 @@ if ( ! function_exists( 'moneta_woocommerce_wrapper_before' ) ) {
 	 * @return void
 	 */
 	function moneta_woocommerce_wrapper_before() {
-		?>
+		if ( is_shop() ) {
+			?>
+				<main id="primary" class="site-main site-main_left-sidebar">
+
+				<aside id="moneta_shop_widget-area" class="widget-area moneta_shop_widget-area">
+
+					<div id="moneta_shop_widget-area__trigger" href="#" class="moneta_shop_widget-area__trigger">
+						Фильтры
+					</div>
+					
+					<?php dynamic_sidebar( 'sidebar-shop' ); ?>
+				</aside><!-- #secondary -->
+
+				<div class="moneta-products-wrapper">
+			<?php
+		} else {
+			?>
 			<main id="primary" class="site-main">
-		<?php
+			<?php 
+		}
 	}
 }
 add_action( 'woocommerce_before_main_content', 'moneta_woocommerce_wrapper_before' );
@@ -134,9 +151,17 @@ if ( ! function_exists( 'moneta_woocommerce_wrapper_after' ) ) {
 	 * @return void
 	 */
 	function moneta_woocommerce_wrapper_after() {
-		?>
+		if ( is_shop() ) {
+			?>
+				</div><!-- /.moneta-products-wrapper -->
+
+				</main><!-- #main -->
+			<?php
+		} else {
+			?>
 			</main><!-- #main -->
-		<?php
+			<?php 
+		}
 	}
 }
 add_action( 'woocommerce_after_main_content', 'moneta_woocommerce_wrapper_after' );
@@ -226,3 +251,23 @@ if ( ! function_exists( 'moneta_woocommerce_header_cart' ) ) {
 		<?php
 	}
 }
+/**
+ * Hide title for Shop.
+ */
+add_filter('woocommerce_show_page_title', 'moneta_shop_no_title');
+function moneta_shop_no_title($title) {
+	if (is_shop()) {
+		$title = false;
+	}
+	return $title;
+}
+
+function moneta_before_shop_loop() {
+	echo '<div class="woocommerce-ordering-wrapper">';
+}
+add_action( 'woocommerce_before_shop_loop', 'moneta_before_shop_loop', 19 );
+
+function moneta_after_shop_loop() {
+	echo '</div><!-- /.woocommerce-ordering-wrapper -->';
+}
+add_action( 'woocommerce_before_shop_loop', 'moneta_after_shop_loop', 31 );
