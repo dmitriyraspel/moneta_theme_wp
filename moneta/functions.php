@@ -163,8 +163,10 @@ function moneta_scripts() {
 
 	// Enqueue Google fonts
 	wp_enqueue_style( 'moneta-fonts-temp', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap/', array(), null );
+
 	// Main style temp
-	wp_enqueue_style( 'moneta-style-temp', get_template_directory_uri() . '/assets/css/style.css', array(), filemtime(get_template_directory() . '/assets/css/style.css') );
+	wp_enqueue_style( 'moneta-style-temp', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css') );
+
 
 	// wp_enqueue_script( 'moneta-navigation', get_template_directory_uri() . '/js/navigation.js?2', array(), _S_VERSION, true );
 

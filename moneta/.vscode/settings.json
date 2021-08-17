@@ -4,7 +4,7 @@
       {
          "format": "expanded",
          "extensionName": ".css",
-         "savePath": "/assets/css",
+         "savePath": "/",
       }
    ],
    "liveSassCompile.settings.generateMap": false,
