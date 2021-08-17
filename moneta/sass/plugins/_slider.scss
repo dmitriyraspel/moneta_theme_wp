@@ -1,0 +1,25 @@
+/* slider */
+.slick-slider button {
+    min-height: 12px;
+}
+.slick-slider .slick-arrow:hover,
+.slick-slider .slick-arrow:focus {
+    background-color: transparent;
+}
+.slick-dots button,
+.slick-dots button:hover,
+.slick-dots button:focus {
+    font-size: 0;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #c19e6d;
+    border-radius: 50%;
+    background: #fff;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-dots li.slick-active button {
+    background: #c19e6d;
+}
