@@ -284,7 +284,7 @@ add_action( 'woocommerce_before_shop_loop', 'moneta_after_shop_loop', 31 );
  * Add button for open filters.
  */
 // function moneta_filters_btn() {
-// 	echo '<div id="moneta_filters_btn" href="#" class="moneta_filters_btn">
+// 	echo '<div id="moneta_filters_btn" class="moneta_filters_btn">
 // 	Фильтры
 // 	</div>';
 // }
@@ -299,3 +299,11 @@ function moneta_add_btn_before_quantity() {
 }
 add_action( 'woocommerce_before_quantity_input_field', 'moneta_add_btn_before_quantity', 10 );
 
+/**
+ * Add buttons for quantity.
+ */
+// function moneta_add_btn_coupon() {
+// 	echo '<div id="moneta_coupon_trigger" class="moneta_coupon_trigger">
+// 	Получить скидку</div>';
+// }
+// add_action( 'woocommerce_cart_coupon', 'moneta_add_btn_coupon', 5 );
