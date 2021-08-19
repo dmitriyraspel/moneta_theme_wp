@@ -15,9 +15,9 @@ $woocommerce__color-success: $success;
 $woocommerce__color-info: #8abb19;
 
 // @import "plugins/woocommerce/alignments";
-@import "plugins/woocommerce/woocommerce-page";
-@import "plugins/woocommerce/woocommerce-breadcrumb";
-@import "plugins/woocommerce/woocommerce-pagination";
+@import "plugins/woocommerce/page";
+@import "plugins/woocommerce/breadcrumb";
+@import "plugins/woocommerce/pagination";
 @import "plugins/woocommerce/onsale";
 @import "plugins/woocommerce/price";
 
@@ -45,7 +45,9 @@ $woocommerce__color-info: #8abb19;
  * General WooCommerce components
  */
 @import "plugins/woocommerce/components";
+@import "plugins/woocommerce/quantity";
 @import "plugins/woocommerce/shop";
+@import "plugins/woocommerce/cart";
 
 /**
  * WooCommerce widgets
