@@ -1,219 +1,35 @@
-/**
- * Header cart
- */
-.site-header-cart {
-	position: relative;
-	margin: 0;
-	padding: 0;
-
-	.cart-contents {
-		text-decoration: none;
-	}
-
-	.widget_shopping_cart {
-		display: none;
-	}
-
-	.product_list_widget {
-		margin: 0;
-		padding: 0;
-	}
-}
 .woocommerce-ordering-wrapper {
-	// display: flex;
-	// align-items: center;
 	overflow-x: auto;
-
-	// &>* {
-	// 	margin-right: 10px;
-	// }
-
-	// @media screen and (min-width: 600px) {
-	// 	display: flex;
-	// 	flex-wrap: wrap;
-	// 	justify-content: space-between;
-	// }	
 }
 .woocommerce-ordering {
 	max-width: 268px;
 }
-.moneta_filters_btn {
-	position: relative;
-	cursor: pointer;
-	font-size: $input-font-size;
-	line-height: $input-line-height;
-	color: $input-color;
-	border: 1px solid $input-border-color;
-	border-radius: $input-border-radius;
-	padding: $input-padding;
-
-	&::before {
-        content: "";
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        margin-right: 5px;
-        background-image: url(assets/img/filter-temp.png);
-        background-size: contain;
-    }
-
-}
-
-
-.woocommerce-result-count {
-	font-size: 14px;
-	margin-bottom: 0.5em;
-}
-.woocommerce-ordering {
-	// max-width: 240px;
-}
-
-.woocommerce-product-rating {
-	display: flex;
-	flex-wrap: wrap;
-    justify-content: space-between;
-}
-/**
- * Star rating
- */
-.star-rating {
-	overflow: hidden;
-	position: relative;
-	// height: 1.618em;
-	// line-height: 1.618;
-	// width: 5.3em;
-	width: 100px;
-	height: 19px;
-	font-size: 0px;
-	// Проверить подключение шрифтов для рейтинга и woocom
-	// font-family: star;
-	// font-weight: 400;
-
-	&::before {
-		// content: "\53\53\53\53\53";
-		content: "";
-		background-image: url(assets/img/star-rating-group-100.png);
-		// opacity: 0.25;
-		// float: left;
-		top: 0;
-		left: 0;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		z-index: 2;
+.woocommerce-notices-wrapper {
+	background-color: #f9f8f8;
+	border-radius: 10px;
+	
+	& > * {
+		padding: 10px;
+	}
+	& > *:last-child {
+		margin-bottom: 20px;
 	}
 
-	span {
-		overflow: hidden;
-		// float: left;
-		top: 0;
-		left: 0;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		// background-color: #FFD600
-		// padding-top: 1.5em;
-
-	}
-
-	span::before {
-		// content: "\53\53\53\53\53";
-		top: 0;
-		position: absolute;
-		left: 0;
-		color: $color__link;
-	}
-}
-
-p.stars {
-
-	a {
-		position: relative;
-		height: 1em;
-		width: 1em;
-		text-indent: -999em;
-		display: inline-block;
-		text-decoration: none;
-		margin-right: 1px;
-		font-weight: 400;
-
-		&::before {
-
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 1em;
-			height: 1em;
-			line-height: 1;
-			font-family: star;
-			content: "\53";
-			color: $text;
-			text-indent: 0;
-			opacity: 0.25;
-		}
-
-		&:hover {
-
-			~ a::before {
-				content: "\53";
-				color: $text;
-				opacity: 0.25;
-			}
-		}
-	}
-
-	&:hover {
-
+	.woocommerce-message {
+		// padding: 10px;
 		a {
-
-			&::before {
-				content: "\53";
-				color: $color__link;
-				opacity: 1;
-			}
-		}
-	}
-
-	&.selected {
-
-		a.active {
-
-			&::before {
-				content: "\53";
-				color: $color__link;
-				opacity: 1;
-			}
-
-			~ a::before {
-				content: "\53";
-				color: $text;
-				opacity: 0.25;
-			}
-		}
-
-		a:not(.active) {
-
-			&::before {
-				content: "\53";
-				color: $color__link;
-				opacity: 1;
-			}
+			border-bottom: 1px dotted $gold;
 		}
 	}
 }
-
 /**
  * Tabs
  */
-.woocommerce-tabs {
-	width: 500px;
+ .woocommerce-tabs {
+    width: 500px;
 	max-width: 100%;
-	// border: 1px solid red;
-	padding-top: 10px;
-	padding-left: 10px;
 
-	ul.tabs { // role="tablist"
+    ul.tabs { // role="tablist"
 		position: relative;
 		list-style: none;
 		margin: 0;
@@ -221,200 +37,102 @@ p.stars {
 		text-align: left;
 		display: flex;
 
-		&::after {
-			// content: "";
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			display: block;
-			width: 100%;
-			height: 1px;
-			border-bottom: 1px solid #DEDCDC;
-		}
-
-
-		li {
+        li {
 			display: block;
 			margin: 0;
-			padding: 10px 15px;
+			padding: 8px 16px;
 			position: relative;
-			// border: 1px solid #DEDCDC;
-			// border-bottom: transparent;
-			// margin-right: -1px;	
 
 			a {
-				// padding: 1em 0;
 				display: block;
 				
+                &:hover,
 				&:focus,
 				&:active {
 					outline: none;
+                    color: $text;
 				}
 			}
 			&.active {
-				border-top: transparent;
-				border-bottom: #fff;
+				// border: 1px solid $input-border-color;
+				background-color: $background-alt;
+                border-radius: 10px;
 				a {
 					font-weight: $bold;
 				}
 			}
 		}
-	}
-
-	.panel {
-
-		h2:first-of-type {
-			margin-bottom: 1em;
-		}
-	}
-}
+    }
+    .page-content, .entry-content, .entry-summary {
+        margin: 0;
+    }
+ }
 
 /**
- * Password strength meter
+  * Coupon
  */
-.woocommerce-password-strength {
-	text-align: right;
+.coupon {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	transition: $base-transition;
+	background-color: $background-alt;
+	padding: 20px 10px 0;
+	border-radius: 10px;
+	
+	label {}
 
-	&.strong {
-		color: $woocommerce__color-success;
+	input[type="text"] {
+		min-height: 1px;
+	}
+	.button{
+		font-size: 15px;
 	}
 
-	&.short {
-		color: $woocommerce__color-error;
-	}
-
-	&.bad {
-		color: $woocommerce__color-error;
-	}
-
-	&.good {
-		color: $woocommerce__color-info;
-	}
+	// .moneta_coupon_trigger {
+	// 	position: absolute;
+	// 	top: 0%;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: 20px;
+	// 	display: block;
+	// 	cursor: pointer;
+		
+	// 	&::after {
+	// 		content: "";
+	// 		display: inline-block;
+	// 		// position: absolute;
+	// 		width: 12px;
+	// 		height: 12px;
+	// 		// top: 0;
+	// 		// left: 80px;
+	// 		margin-left: 8px;
+	// 		background: url(assets/img/arrow-down-24-temp-1.png) center no-repeat;
+	// 		background-size: contain;
+	// 	}
+	// }
 }
+@media ( min-width: 600px ) {
+	.coupon {
+		flex-direction: row;
+		// justify-content: space-between;
+		align-items: baseline;
 
-/**
- * Forms
- */
-.form-row {
-
-	&.woocommerce-validated {
-
-		input.input-text {
-			box-shadow: inset 2px 0 0 $woocommerce__color-success;
+		label {
+			width: 100px;
 		}
-	}
-
-	&.woocommerce-invalid {
-
-		input.input-text {
-			box-shadow: inset 2px 0 0 $woocommerce__color-error;
+		input[type="text"] {
+			width: 200px;
+			height: 40px;
+			margin-right: 10px;
 		}
-	}
-}
-
-.required {
-	color: $error;
-}
-
-/**
- * Notices
- */
-.woocommerce-message,
-.woocommerce-info,
-.woocommerce-error,
-p.no-comments {
-	background-color: $woocommerce__color-success;
-	clear: both;
-}
-
-.woocommerce-info,
-p.no-comments {
-	background-color: $woocommerce__color-info;
-}
-
-.woocommerce-error {
-	background-color: $woocommerce__color-error;
-}
-
-.demo_store {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	margin: 0;
-	padding: 1em;
-	background-color: $woocommerce__color-info;
-	z-index: 9999;
-}
-
-@media screen and (min-width: 48em) {
-
-	/**
-	 * Header cart
-	 */
-	.site-header-cart {
-
-		.widget_shopping_cart {
-			position: absolute;
-			top: 100%;
-			width: 100%;
-			z-index: 999999;
-			left: -999em;
-			display: block;
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-		}
-
-		&:hover,
-		&.focus {
-
-			.widget_shopping_cart {
-				left: 0;
-				display: block;
-			}
+		.button {
+			font-weight: $normal;
+			text-transform: none;
 		}
 	}
 }
 
-.woocommerce .quantity {
-	display: inline-block;
-    position: relative;
-    width: 120px;
-    height: 40px;
-    padding: 0 40px;
-    border: 1px solid $input-border-color;
-    border-radius: $input-border-radius;
-    text-align: center;
-    font-size: 18px;
-    color: $text-dark;
-    margin-top: 20px;
-
-	input[type="number"] {
-		width: 40px;
-		border: none;
-		padding: 0;
-		border-left: 1px solid $input-border-color;
-		border-right: 1px solid $input-border-color;
-		border-radius: 0;
-		height: 100%;
-		text-align: center;
-	}
-
-	.moneta-quantity-down,
-	.moneta-quantity-up {
-		cursor: pointer;
-		position: absolute;
-		display: block;
-		top: 0;
-		height: 100%;
-		width: 40px;
-		padding-top: 5px;
-		font-size: 18px;
-		border-radius: $input-border-radius;
-	}
-	.moneta-quantity-down {
-		left: 0;
-	}
-	.moneta-quantity-up {
-		right: 0;
-	}
+.woocommerce-terms-and-conditions-wrapper {
+	font-size: 12px;
 }
