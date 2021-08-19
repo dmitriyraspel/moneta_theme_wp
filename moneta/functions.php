@@ -167,18 +167,24 @@ function moneta_scripts() {
 	// Main style temp
 	wp_enqueue_style( 'moneta-style-temp', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css') );
 
-
 	// wp_enqueue_script( 'moneta-navigation', get_template_directory_uri() . '/js/navigation.js?2', array(), _S_VERSION, true );
 
-	wp_enqueue_script( 'market-exchange-js', get_template_directory_uri() . '/assets/js/exchange.js?39', array('jquery'), true );
-	wp_enqueue_script( 'lib-chart-js', get_template_directory_uri() . '/assets/js/lib/chart.js', array('jquery'), true );
-	wp_enqueue_script( 'market-charts-js', get_template_directory_uri() . '/assets/js/charts.js?1', array('lib-chart-js'), true );
-
+	wp_enqueue_script( 'moneta-exchange-js', get_template_directory_uri() . '/assets/js/exchange.js?45', array('jquery'), true );
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	if ( is_product() ) {
-		wp_enqueue_script( 'single-product-quantity-js', get_template_directory_uri() . '/assets/js/quantity.js?1', array(), true );
+
+	if ( is_woocommerce() ) {
+		wp_enqueue_script( 'moneta-shop-filters-js', get_template_directory_uri() . '/assets/js/shop-filters.js?3', array(), true );
+	}
+	if ( is_woocommerce() || is_cart() ) {
+		wp_enqueue_script( 'moneta-product-quantity-js', get_template_directory_uri() . '/assets/js/quantity.js?3', array(), true );
+	}
+	if ( is_page( array(17, 'statistika') ) ) {
+		wp_enqueue_script( 'moneta-coins-rates-js', get_template_directory_uri() . '/assets/js/coins-rates.js?2', array('jquery'), true );
+		wp_enqueue_script( 'lib-chart-js', get_template_directory_uri() . '/assets/js/lib/chart.js', array('jquery'), true );
+		wp_enqueue_script( 'market-charts-js', get_template_directory_uri() . '/assets/js/charts.js?8', array('lib-chart-js'), true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'moneta_scripts' );

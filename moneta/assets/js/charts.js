@@ -21,16 +21,14 @@ function loadGPSChart() {
     };
     jQuery.ajax(settings).done(function (response) {
         coins = response.coins;
-        for (let i = 0; i < coins.length; i++) {
+        
+        var startCoins = coins.length >= 75 ? coins.length - 75 : coins.length;
+
+        for (let i = startCoins; i < coins.length; i++) {
                 coin_GPS_Sell.push(coins[i].Sell);
                 coin_GPS_Buy.push(coins[i].Buy);
-                let temp_date = new Date(coins[i].ParseDate)
-
-                let year = temp_date.getFullYear(),
-                    mounth = temp_date.getMonth() < 10? "0"+temp_date.getMonth(): temp_date.getMonth(),
-                    day = temp_date.getDate() < 10? "0"+temp_date.getDate(): temp_date.getDate();
-                labels_GPS.push( year+ "." + mounth + "." + day);
-            console.log(temp_date);
+               
+                labels_GPS.push(coins[i].ParseDate);
         }
 
         const data = {
@@ -63,7 +61,7 @@ function loadGPSChart() {
                     },
                     title: {
                         display: true,
-                        text: 'Георгий победоносец, Санкт-Петербург 50г'
+                        text: 'Георгий победоносец, Санкт-Петербург 50 рублей'
                     }
                 }
             },
@@ -80,15 +78,14 @@ function loadGPMChart() {
     };
     jQuery.ajax(settings).done(function (response) {
         coins = response.coins;
-        for (let i = 0; i < coins.length; i++) {
+
+        var startCoins = coins.length >= 75 ? coins.length - 75 : 0;
+
+        for (let i = startCoins; i < coins.length; i++) {
             coin_GPM_Sell.push(coins[i].Sell);
             coin_GPM_Buy.push(coins[i].Buy);
-            let temp_date = new Date(coins[i].ParseDate)
-
-            let year = temp_date.getFullYear(),
-                mounth = temp_date.getMonth() < 10? "0"+temp_date.getMonth(): temp_date.getMonth(),
-                day = temp_date.getDate() < 10? "0"+temp_date.getDate(): temp_date.getDate();
-            labels_GPM.push( year+ "." + mounth + "." + day);
+           
+            labels_GPM.push(coins[i].ParseDate);
         }
 
         const data = {
@@ -121,7 +118,7 @@ function loadGPMChart() {
                     },
                     title: {
                         display: true,
-                        text: 'Георгий победоносец, Москва 50г'
+                        text: 'Георгий победоносец, Москва 50 рублей'
                     }
                 }
             },
@@ -138,15 +135,14 @@ function loadGP100Chart() {
     };
     jQuery.ajax(settings).done(function (response) {
         coins = response.coins;
-        for (let i = 0; i < coins.length; i++) {
+
+        var startCoins = coins.length >= 75 ? coins.length - 75 : 0;
+
+        for (let i = startCoins; i < coins.length; i++) {
             coin_GP100_Sell.push(coins[i].Sell);
             coin_GP100_Buy.push(coins[i].Buy);
-            let temp_date = new Date(coins[i].ParseDate)
-
-            let year = temp_date.getFullYear(),
-                mounth = temp_date.getMonth() < 10? "0"+temp_date.getMonth(): temp_date.getMonth(),
-                day = temp_date.getDate() < 10? "0"+temp_date.getDate(): temp_date.getDate();
-            labels_GP100.push( year+ "." + mounth + "." + day);
+            
+            labels_GP100.push(coins[i].ParseDate);
         }
 
         const data = {
@@ -179,7 +175,7 @@ function loadGP100Chart() {
                     },
                     title: {
                         display: true,
-                        text: 'Георгий победоносец, 100г'
+                        text: 'Георгий победоносец, 100 рублей'
                     }
                 }
             },
@@ -187,12 +183,27 @@ function loadGP100Chart() {
     });
 }
 
+jQuery(document).ready(function(){
 
-loadGPSChart();
-loadGPMChart();
-loadGP100Chart();
-
-// function hideChart() {
-//     var GPSChartButton = document.getElementById( 'GPSChart-trigger' );
-//     var GPSChartButton = document.getElementById( 'GPSChart-trigger' );
-// }
+    loadGPSChart();
+    loadGPMChart();
+    loadGP100Chart();
+    jQuery("#GPSChart-trigger").click(function(){
+  
+        jQuery("#coins-ratesGPS").css('display', 'block');
+        jQuery("#coins-ratesGPM").css('display', 'none');
+        jQuery("#coins-ratesGP100").css('display', 'none');
+    });
+    jQuery("#GPMChart-trigger").click(function(){
+   
+        jQuery("#coins-ratesGPM").css('display', 'block');
+        jQuery("#coins-ratesGPS").css('display', 'none');
+        jQuery("#coins-ratesGP100").css('display', 'none');
+    });
+    jQuery("#GP100Chart-trigger").click(function(){
+     
+        jQuery("#coins-ratesGP100").css('display', 'block');
+        jQuery("#coins-ratesGPS").css('display', 'none');
+        jQuery("#coins-ratesGPM").css('display', 'none');
+    });
+})
