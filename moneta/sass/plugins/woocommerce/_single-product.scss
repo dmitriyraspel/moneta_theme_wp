@@ -81,7 +81,7 @@
 				li {
 					list-style: none;
 					cursor: pointer;
-					// float: left;
+					margin-right: 6px;
 
 					img {
 						max-width: 100px;
@@ -242,6 +242,16 @@
 		}
 	}
 
+	.woocommerce-message {
+		background: #f9f8f8;
+		border: 1px solid $gold;
+		border-radius: 10px;
+		padding: 10px 20px;
+
+		a {
+			display: block;
+		}
+	}
 }
 
 .stock {

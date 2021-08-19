@@ -70,6 +70,48 @@ ul.products {
 			font-size: 14px;
 			color: $button-color;
 		}
+		
+		.added_to_cart {
+			// position: relative;
+			// font-weight: $bold;
+			// padding-left: 20px;
+			// padding-right: 18px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 70px;
+			background: #f9f8f8;
+			border: 1px solid $gold;
+			border-radius: 10px;
+			padding: 10px 20px;
+			font-weight: $bold;
+			text-align: center;
+
+			
+			// &::before,
+			// &::after {
+			// 	content: "";
+			// 	position: absolute;
+			// 	display: block;
+			// 	width: 15px;
+			// 	height: 15px;
+			// 	outline: none;
+			// }
+
+			&::before {
+				top: 14px;
+				left: 0;
+				background-image: url(assets/img/cart_46-41.png);
+				background-size: contain;
+			}
+			&::after {
+				right: 0;
+				bottom: 15px;
+				background-image: url(assets/img/cancel-temp.png);
+				background-size: contain;
+			}
+		}
 	}
 }
 

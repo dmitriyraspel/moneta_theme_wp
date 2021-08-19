@@ -622,6 +622,10 @@ a:hover, a:active {
   outline: 0;
 }
 
+a.button:hover, a.button:focus, a.button:active, a.button:visited {
+  color: #fff;
+}
+
 button,
 .button,
 input[type="button"],
@@ -794,6 +798,7 @@ input[type="color"] {
   display: block;
   border: 1px solid rgba(209, 165, 121, 0.7);
   width: 100%;
+  max-width: 100%;
   color: #666;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -832,6 +837,7 @@ textarea {
           appearance: none;
   border: 1px solid rgba(209, 165, 121, 0.7);
   width: 100%;
+  max-width: 100%;
   color: #666;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -857,6 +863,7 @@ textarea:focus {
 select {
   border: 1px solid rgba(209, 165, 121, 0.7);
   width: 100%;
+  max-width: 100%;
   color: #666;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
