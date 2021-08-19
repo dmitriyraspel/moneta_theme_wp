@@ -173,36 +173,36 @@
 			display: inline-block;
 		}
  
-		input[type="number"] {
-			width: 40px;
-			border: none;
-			padding: 0;
-			border-left: 1px solid $input-border-color;
-			border-right: 1px solid $input-border-color;
-			border-radius: 0;
-			height: 100%;
-			text-align: center;
-		}
+		// input[type="number"] {
+		// 	width: 40px;
+		// 	border: none;
+		// 	padding: 0;
+		// 	border-left: 1px solid $input-border-color;
+		// 	border-right: 1px solid $input-border-color;
+		// 	border-radius: 0;
+		// 	height: 100%;
+		// 	text-align: center;
+		// }
 
-		&::after,
-		&::before {
-			position: absolute;
-			display: block;
-			content: "-";
-			top: 0;
-			height: 100%;
-			width: 40px;
-			padding-top: 3px;
+		// &::after,
+		// &::before {
+		// 	position: absolute;
+		// 	display: block;
+		// 	content: "-";
+		// 	top: 0;
+		// 	height: 100%;
+		// 	width: 40px;
+		// 	padding-top: 3px;
 
-		}
-		&::before {
-			content: "-";
-			left: 0;
-		}
-		&::after {
-			content: "+";
-			right: 0;
-		}
+		// }
+		// &::before {
+		// 	content: "-";
+		// 	left: 0;
+		// }
+		// &::after {
+		// 	content: "+";
+		// 	right: 0;
+		// }
 	}
 
 	.single_add_to_cart_button {

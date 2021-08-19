@@ -374,3 +374,47 @@ p.no-comments {
 		}
 	}
 }
+
+.woocommerce .quantity {
+	display: inline-block;
+    position: relative;
+    width: 120px;
+    height: 40px;
+    padding: 0 40px;
+    border: 1px solid $input-border-color;
+    border-radius: $input-border-radius;
+    text-align: center;
+    font-size: 18px;
+    color: $text-dark;
+    margin-top: 20px;
+
+	input[type="number"] {
+		width: 40px;
+		border: none;
+		padding: 0;
+		border-left: 1px solid $input-border-color;
+		border-right: 1px solid $input-border-color;
+		border-radius: 0;
+		height: 100%;
+		text-align: center;
+	}
+
+	.moneta-quantity-down,
+	.moneta-quantity-up {
+		cursor: pointer;
+		position: absolute;
+		display: block;
+		top: 0;
+		height: 100%;
+		width: 40px;
+		padding-top: 5px;
+		font-size: 18px;
+		border-radius: $input-border-radius;
+	}
+	.moneta-quantity-down {
+		left: 0;
+	}
+	.moneta-quantity-up {
+		right: 0;
+	}
+}
