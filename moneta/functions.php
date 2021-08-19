@@ -177,6 +177,9 @@ function moneta_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	if ( is_product() ) {
+		wp_enqueue_script( 'single-product-quantity-js', get_template_directory_uri() . '/assets/js/quantity.js?1', array(), true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'moneta_scripts' );
 
