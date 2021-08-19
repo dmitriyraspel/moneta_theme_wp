@@ -578,6 +578,10 @@ ul.products li.product .added_to_cart::after {
   overflow-x: auto;
 }
 
+.woocommerce-ordering {
+  max-width: 268px;
+}
+
 .moneta_filters_btn {
   position: relative;
   cursor: pointer;

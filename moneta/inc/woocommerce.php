@@ -262,6 +262,14 @@ function moneta_shop_no_title($title) {
 	return $title;
 }
 
+/**
+ * Remove result count.
+ */
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+
+/**
+ * Add ordering-wrapper.
+ */
 function moneta_before_shop_loop() {
 	echo '<div class="woocommerce-ordering-wrapper">';
 }
@@ -271,3 +279,26 @@ function moneta_after_shop_loop() {
 	echo '</div><!-- /.woocommerce-ordering-wrapper -->';
 }
 add_action( 'woocommerce_before_shop_loop', 'moneta_after_shop_loop', 31 );
+
+/**
+ * Add button for open filters.
+ */
+// function moneta_filters_btn() {
+// 	echo '<div id="moneta_filters_btn" href="#" class="moneta_filters_btn">
+// 	Фильтры
+// 	</div>';
+// }
+// add_action( 'woocommerce_before_shop_loop', 'moneta_filters_btn', 20 );
+
+/**
+ * Add buttons for quantity.
+ */
+// function moneta_add_btn_before_quantity() {
+// 	echo '<div id="moneta-quantity-up" class="moneta-quantity-up"></div>';
+// }
+// add_action( 'woocommerce_before_quantity_input_field', 'moneta_add_btn_before_quantity', 10 );
+
+// function moneta_add_btn_after_quantity() {
+// 	echo '<div id="moneta-quantity-down" class="moneta-quantity-down"></div>';
+// }
+// add_action( 'woocommerce_after_add_to_cart_quantity', 'moneta_add_btn_after_quantity', 20 );
