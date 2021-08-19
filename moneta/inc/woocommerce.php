@@ -293,12 +293,9 @@ add_action( 'woocommerce_before_shop_loop', 'moneta_after_shop_loop', 31 );
 /**
  * Add buttons for quantity.
  */
-// function moneta_add_btn_before_quantity() {
-// 	echo '<div id="moneta-quantity-up" class="moneta-quantity-up"></div>';
-// }
-// add_action( 'woocommerce_before_quantity_input_field', 'moneta_add_btn_before_quantity', 10 );
+function moneta_add_btn_before_quantity() {
+	echo '<div class="moneta-quantity-down">-</div>
+	<div class="moneta-quantity-up">+</div>';
+}
+add_action( 'woocommerce_before_quantity_input_field', 'moneta_add_btn_before_quantity', 10 );
 
-// function moneta_add_btn_after_quantity() {
-// 	echo '<div id="moneta-quantity-down" class="moneta-quantity-down"></div>';
-// }
-// add_action( 'woocommerce_after_add_to_cart_quantity', 'moneta_add_btn_after_quantity', 20 );
