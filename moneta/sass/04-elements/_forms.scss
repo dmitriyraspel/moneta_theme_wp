@@ -46,6 +46,7 @@ input[type="color"] {
 	display: block;
 	border: 1px solid $input-border-color;
 	width: 100%;
+	max-width: 100%;
 	color: $input-color;
 	font-family: $font;
 	font-weight: $normal;
@@ -67,6 +68,7 @@ textarea {
 	appearance: none;
 	border: 1px solid $input-border-color;
 	width: 100%;
+	max-width: 100%;
 	color: $input-color;
 	font-family: $font;
 	font-weight: $normal;
@@ -92,6 +94,7 @@ textarea {
 select{
 	border: 1px solid $input-border-color;
 	width: 100%;
+	max-width: 100%;
 	color: $input-color;
 	font-family: $font;
 	font-weight: $normal;
