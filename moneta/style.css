@@ -597,6 +597,14 @@ table {
   width: 100%;
 }
 
+table tr {
+  vertical-align: baseline;
+}
+
+table th {
+  text-align: inherit;
+}
+
 a {
   color: #666;
   outline: 0;
