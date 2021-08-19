@@ -19,3 +19,14 @@
 		}
 	}
 }
+
+.woocommerce_checkout_place_order {
+	width: 350px;
+	max-width: 100%;	
+}
+
+.woocommerce-error {
+	strong {
+		color: $error;
+	}
+}

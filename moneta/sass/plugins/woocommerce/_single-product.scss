@@ -150,61 +150,6 @@
 		}
 	}
 
-	.quantity {
-		display: inline-block;
-		position: relative;
-		width: 120px;
-		height: 40px;
-		padding: 0 40px;
-		border: 1px solid $input-border-color;
-		border-radius: $input-border-radius;
-		text-align: center;
-		font-size: 18px;
-		color: $text-dark;
-
-		margin-top: 20px;
-		@media screen and (min-width: $tablet-width) {
-			margin-top: 30px;
-			margin-right: 20px;
-		}
-
-		
-		& > * {
-			display: inline-block;
-		}
- 
-		// input[type="number"] {
-		// 	width: 40px;
-		// 	border: none;
-		// 	padding: 0;
-		// 	border-left: 1px solid $input-border-color;
-		// 	border-right: 1px solid $input-border-color;
-		// 	border-radius: 0;
-		// 	height: 100%;
-		// 	text-align: center;
-		// }
-
-		// &::after,
-		// &::before {
-		// 	position: absolute;
-		// 	display: block;
-		// 	content: "-";
-		// 	top: 0;
-		// 	height: 100%;
-		// 	width: 40px;
-		// 	padding-top: 3px;
-
-		// }
-		// &::before {
-		// 	content: "-";
-		// 	left: 0;
-		// }
-		// &::after {
-		// 	content: "+";
-		// 	right: 0;
-		// }
-	}
-
 	.single_add_to_cart_button {
 		// width: 280px;
 		width: 100%;

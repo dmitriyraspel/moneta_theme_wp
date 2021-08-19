@@ -1,0 +1,51 @@
+.woocommerce .quantity {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 30px;
+    padding: 0 30px;
+    border: 1px solid $input-border-color;
+    border-radius: $input-border-radius;
+    text-align: center;
+    color: $text-dark;
+
+	input[type="number"] {
+		border: none;
+		padding: 0;
+		border-left: 1px solid $input-border-color;
+		border-right: 1px solid $input-border-color;
+		border-radius: 0;
+		height: 100%;
+		text-align: center;
+        background-color: transparent;
+	}
+
+	.moneta-quantity-down,
+	.moneta-quantity-up {
+		cursor: pointer;
+		position: absolute;
+		display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+		top: 0;
+		height: 100%;
+        width: 30%;
+		// font-size: 18px;
+		border-radius: $input-border-radius;
+	}
+	.moneta-quantity-down {
+		left: 0;
+	}
+	.moneta-quantity-up {
+		right: 0;
+	}
+    
+}
+// @media ( min-width: $tablet-width ) {
+//     .woocommerce .quantity {
+//         width: 120px;
+//         height: 40px;
+//         padding: 0 40px;
+//     }
+// }
