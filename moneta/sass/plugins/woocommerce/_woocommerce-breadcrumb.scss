@@ -2,7 +2,11 @@
     // @include container;
     font-size: 14px;
     color: $text;
+    margin-bottom: 1em;
     a {
         color: $text;
+    }
+    @media screen and (max-width: $tablet-width) {
+        margin-top: 1em;
     }
 }
