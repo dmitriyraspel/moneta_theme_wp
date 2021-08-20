@@ -1,0 +1,125 @@
+.wc-block-grid__products {
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .wc-block-grid__product {
+        text-align: initial;
+        max-width: 175px;
+        font-size: inherit;
+        display: flex;
+        flex-direction: column;
+
+        & > a {
+            display: block;
+        }
+
+        .wc-block-grid__product-image {
+            margin: 0 auto 16px;
+            max-width: 100%;
+            // max-width: 150px;
+        }
+
+        .wc-block-grid__product-title {
+            margin: 16px auto;
+            position: relative;
+            font-size: 14px;
+            color: $text;
+            height: 44px;
+            max-height: 44px;
+            overflow: hidden;
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                right: 0;
+                height: 16px;
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%,  rgba(255, 255, 255, 0.4) 100%);
+            }
+        }
+
+        .wc-block-grid__product-price {
+            margin: auto 0 16px;
+            color: $text-dark;
+            font-weight: 700;
+            font-size: 16px;
+            
+            span.amount {
+                display: block;
+            }
+            del {
+                font-size: 13px;
+                color: $text;
+                font-weight: $normal;
+            }
+        }
+
+        // .wc-block-grid__product-rating {
+        //     display: none;
+        // }
+
+        .wc-block-grid__product-onsale {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: none; // TEMP !!!
+            // border: 1px solid red;
+            
+        }
+        .wc-block-grid__product-add-to-cart {
+            // margin-top: auto;
+            max-width: 100%;
+
+
+        }
+    }
+}
+
+////////////
+
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link {
+    padding: 8px 20px;
+    width: 220px;
+    max-width: 100%;
+    font-weight: $bold;
+    font-size: 14px;
+}
+
+/////////////////
+@media (max-width: 600px) {
+    .wc-block-grid.has-4-columns .wc-block-grid__products,
+    .wc-block-grid.has-6-columns .wc-block-grid__products {
+        display: flex!important;
+    }
+    
+    .wc-block-grid.has-4-columns .wc-block-grid__product,
+    .wc-block-grid.has-6-columns .wc-block-grid__product {
+        margin: 0 0 16px 0;
+        flex: 1 0 50%;
+        max-width: 50%;
+        padding: 10px;
+    }
+}
+@media (min-width: 600px) and (max-width: $desktop-width) {
+    .wc-block-grid.has-4-columns .wc-block-grid__product,
+    .wc-block-grid.has-6-columns .wc-block-grid__product {
+        flex: 1 0 33%;
+        max-width: 33%;
+        padding: 10px;
+    }
+}
+@media (min-width: $desktop-width) {
+    .wc-block-grid__products {
+        flex-wrap: nowrap;
+    }
+    .wc-block-grid.has-4-columns .wc-block-grid__product {
+        flex: 1 0 25%;
+        max-width: 250px;
+    }
+    .wc-block-grid.has-6-columns .wc-block-grid__product {
+        // flex: 1 0 16,6%;
+        width: 175px;
+        max-width: calc(100% / 6);
+    }
+}
