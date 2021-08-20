@@ -12,4 +12,4 @@ function filterOpen() {
         widgetArea.classList.toggle('active');
     });
 };
-filterOpen();
+document.addEventListener("DOMContentLoaded", filterOpen);

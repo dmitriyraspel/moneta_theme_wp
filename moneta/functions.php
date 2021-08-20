@@ -176,7 +176,7 @@ function moneta_scripts() {
 	}
 
 	if ( is_woocommerce() ) {
-		wp_enqueue_script( 'moneta-shop-filters-js', get_template_directory_uri() . '/assets/js/shop-filters.js?3', array(), true );
+		wp_enqueue_script( 'moneta-shop-filters-js', get_template_directory_uri() . '/assets/js/shop-filters.js?4', array(), true );
 	}
 	if ( is_woocommerce() || is_cart() ) {
 		wp_enqueue_script( 'moneta-product-quantity-js', get_template_directory_uri() . '/assets/js/quantity.js?4', array(), true );
