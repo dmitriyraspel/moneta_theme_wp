@@ -188,13 +188,23 @@
 	}
 
 	.woocommerce-message {
+		// @include container-content;
 		background: #f9f8f8;
-		border: 1px solid $gold;
+		// border: 1px solid $gold;
 		border-radius: 10px;
 		padding: 10px 20px;
+		font-weight: $bold;
+		// text-align: center;
 
 		a {
 			display: block;
+			max-width: max-content;
+			// margin-left: auto;
+			// margin-right: auto;
+			background: transparent;
+			border: none;
+			border-bottom: none;
+			color: $gold;
 		}
 	}
 }

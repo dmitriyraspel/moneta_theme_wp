@@ -27,6 +27,16 @@ $woocommerce__color-info: #8abb19;
 @import "plugins/woocommerce/tables";
 
 /**
+ * General WooCommerce components
+ */
+@import "plugins/woocommerce/components";
+@import "plugins/woocommerce/quantity";
+@import "plugins/woocommerce/shop";
+@import "plugins/woocommerce/cart";
+@import "plugins/woocommerce/select2";
+
+
+/**
  * Products
  */
 @import "plugins/woocommerce/products";
@@ -40,15 +50,6 @@ $woocommerce__color-info: #8abb19;
  * Checkout
  */
 @import "plugins/woocommerce/checkout";
-
-/**
- * General WooCommerce components
- */
-@import "plugins/woocommerce/components";
-@import "plugins/woocommerce/quantity";
-@import "plugins/woocommerce/shop";
-@import "plugins/woocommerce/cart";
-@import "plugins/woocommerce/select2";
 
 /**
  * WooCommerce widgets
