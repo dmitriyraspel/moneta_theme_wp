@@ -179,7 +179,7 @@ function moneta_scripts() {
 		wp_enqueue_script( 'moneta-shop-filters-js', get_template_directory_uri() . '/assets/js/shop-filters.js?4', array(), true );
 	}
 	if ( is_woocommerce() || is_cart() ) {
-		wp_enqueue_script( 'moneta-product-quantity-js', get_template_directory_uri() . '/assets/js/quantity.js?4', array(), true );
+		wp_enqueue_script( 'moneta-product-quantity-js', get_template_directory_uri() . '/assets/js/quantity.js?4', array('jquery'), true );
 	}
 	if ( is_page( array(17, 'statistika') ) ) {
 		wp_enqueue_script( 'moneta-coins-rates-js', get_template_directory_uri() . '/assets/js/coins-rates.js?2', array('jquery'), true );
@@ -192,7 +192,7 @@ add_action( 'wp_enqueue_scripts', 'moneta_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+// require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
