@@ -1,0 +1,5 @@
+.search {
+    .no-results {
+        @include container-content;
+    }
+}

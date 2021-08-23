@@ -1767,6 +1767,13 @@ a.post-thumbnail {
   max-width: 720px;
 }
 
+.search .no-results {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 720px;
+}
+
 .comments-area {
   margin-left: auto;
   margin-right: auto;
