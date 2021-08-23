@@ -1,21 +1,29 @@
 function quantityBtn() {
-    var quantityBox = document.getElementsByClassName( 'quantity' ).getElementsByClassName( 'input-text' );
-    var btnDown = document.querySelectorAll('moneta-quantity-down');
-    var btnUp = document.querySelectorAll('moneta-quantity-up');
+  var btnsDown = document.querySelectorAll('.moneta-quantity-down');
+  var btnsUp = document.querySelectorAll('.moneta-quantity-up');
+  var updateBtn = document.querySelector (' [name="update_cart"] ');
 
-    if ( quantityBox ) {
-		console.log('quantityBtn' . quantityBox);
-	}
-
-    var value = quantityBox.value;
-    if ( value ) {
-		console.log('value' . value);
-	}
+  for (var i = 0; i < btnsDown.length; i++) {
+    var btn = btnsDown[i];
+    btn.addEventListener("click", function(e){
+      var currentQuantity = e.currentTarget.parentElement;
     
+      var input = currentQuantity.querySelector(".input-text");
+      input.value = input.value > 1 ? input.value - 1 : 1;
+      updateBtn.disabled = false;
+    });
+  }
 
-    // var newBtnUp = document.createElement("div");
-    // newBtnUp.innerHTML = "+";
-    // document.body.insertBefore(newBtnUp, quantityBox);
+  for (var i = 0; i < btnsUp.length; i++) {
+    var btn = btnsUp[i];
+    btn.addEventListener("click", function(e){
+      var currentQuantity = e.currentTarget.parentElement;
+    
+      var input = currentQuantity.querySelector(".input-text");
+      input.value = (Number(input.value) + 1);
+      updateBtn.disabled = false;
+    });
+  }
 
-};
-quantityBtn();
+}
+document.addEventListener("DOMContentLoaded", quantityBtn);
