@@ -26,4 +26,4 @@ function quantityBtn() {
   }
 
 }
-document.addEventListener("DOMContentLoaded", quantityBtn);
+quantityBtn();
