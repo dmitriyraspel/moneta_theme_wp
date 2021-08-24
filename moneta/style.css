@@ -2166,10 +2166,9 @@ a.post-thumbnail {
   text-align: center;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-weight: 700;
-  font-size: 13px;
+  -webkit-transform: translate(-38%, -50%);
+          transform: translate(-38%, -50%);
+  font-size: 12px;
 }
 
 .home-slider_text strong {
@@ -2179,13 +2178,19 @@ a.post-thumbnail {
 
 @media (min-width: 760px) {
   .home-slider_text {
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 
 @media (min-width: 992px) {
   .home-slider_text {
-    font-size: 18px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .home-slider_text {
+    font-size: 24px;
   }
 }
 

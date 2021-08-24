@@ -35,9 +35,8 @@
     text-align: center;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: $bold;
-    font-size: 13px;
+    transform: translate(-38%, -50%);
+    font-size: 12px;
 
     strong {
         color: $text;
@@ -46,11 +45,16 @@
 }
 @media (min-width: #{$tablet-width}) {
     .home-slider_text {
-        font-size: 16px;
+        font-size: 17px;
     }
 }
 @media (min-width: #{$desktop-width}) {
     .home-slider_text {
-        font-size: 18px;
+        font-size: 20px;
+    }
+}
+@media (min-width: 1280px) {
+    .home-slider_text {
+        font-size: 24px;
     }
 }
