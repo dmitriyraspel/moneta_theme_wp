@@ -27,7 +27,7 @@
             </div>
 			<div class="right">
 				<ul>
-					<li><a href="#">Реквизиты и документы компании</a></li>
+					<li><a href="https://goldtech.market/refund_returns/">Реквизиты и документы компании</a></li>
 					<li><a href="https://goldtech.market/privacy-policy/">Политика конфиденциальности</a></li>
 				</ul>
             </div>
