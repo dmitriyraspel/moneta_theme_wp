@@ -234,3 +234,11 @@
 		}
 	}
 }
+
+tr.woocommerce-product-attributes-item--weight th.woocommerce-product-attributes-item__label {
+	position: relative;
+
+	&::after {
+		content: "*";
+	}
+}

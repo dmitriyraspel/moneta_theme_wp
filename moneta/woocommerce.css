@@ -932,6 +932,14 @@ ul.products li.product .added_to_cart::after {
   display: none;
 }
 
+tr.woocommerce-product-attributes-item--weight th.woocommerce-product-attributes-item__label {
+  position: relative;
+}
+
+tr.woocommerce-product-attributes-item--weight th.woocommerce-product-attributes-item__label::after {
+  content: "*";
+}
+
 /**
  * Checkout
  */
