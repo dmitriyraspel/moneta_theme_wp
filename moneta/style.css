@@ -2157,6 +2157,38 @@ a.post-thumbnail {
   background: #c19e6d;
 }
 
+.home-slider_item {
+  position: relative;
+}
+
+.home-slider_text {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.home-slider_text strong {
+  color: #666;
+  font-weight: 700;
+}
+
+@media (min-width: 760px) {
+  .home-slider_text {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  .home-slider_text {
+    font-size: 18px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
@@ -2238,6 +2270,10 @@ a.post-thumbnail {
 
 .background-dark {
   background-color: #242633;
+}
+
+.display-block {
+  display: block;
 }
 
 .invalid {

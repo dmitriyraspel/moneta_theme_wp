@@ -23,3 +23,34 @@
 .slick-dots li.slick-active button {
     background: #c19e6d;
 }
+
+// .home-slider_links {
+//     text-align: center;
+// }
+.home-slider_item {
+    position: relative;
+}
+.home-slider_text {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: $bold;
+    font-size: 13px;
+
+    strong {
+        color: $text;
+        font-weight: $bold;
+    }
+}
+@media (min-width: #{$tablet-width}) {
+    .home-slider_text {
+        font-size: 16px;
+    }
+}
+@media (min-width: #{$desktop-width}) {
+    .home-slider_text {
+        font-size: 18px;
+    }
+}

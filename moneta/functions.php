@@ -188,7 +188,7 @@ function moneta_footer_scripts() {
 		wp_enqueue_script( 'moneta-cart-js', get_template_directory_uri() . '/assets/js/moneta-cart.js?4', array(), true );
 	}
 	if ( is_page( array(17, 'statistika') ) ) {
-		wp_enqueue_script( 'moneta-coins-rates-js', get_template_directory_uri() . '/assets/js/coins-rates.js?2', array('jquery'), true );
+		wp_enqueue_script( 'moneta-coins-rates-js', get_template_directory_uri() . '/assets/js/coins-rates.js?5', array('jquery'), true );
 		wp_enqueue_script( 'lib-chart-js', get_template_directory_uri() . '/assets/js/lib/chart.js', array('jquery'), true );
 		wp_enqueue_script( 'market-charts-js', get_template_directory_uri() . '/assets/js/charts.js?8', array('lib-chart-js'), true );
 	}
