@@ -80,15 +80,15 @@ $radius-block: 10px;
 $base-transition: 0.7s;
 
 // Containers
-$containerWidth: 90%; // Percentage of screen width
-$containerMax: 1180px; // Largest fixed width
-$text-container: 640px; // Limit texts for readability
+$containerWidth: var(--container-width);
+$containerMax: var(--container-max);
+$text-container: 640px;
 $content-width: 720px;
 
 // Media queries
 $tablet-width: 760px !default; // Tablets
 $desktop-width: 992px !default; // Desktops & Laptops
-$huge-width: 1400px !default; // Large Desktops
+$huge-width: 1440px !default; // Large Desktops
 
 /* Spacing */
 $spacing-horizontal: 15px;
