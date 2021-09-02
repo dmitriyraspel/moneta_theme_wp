@@ -517,9 +517,11 @@ form.woocommerce-cart-form {
   max-width: 100%;
 }
 
-.woocommerce-shipping-methods {
+.woocommerce-shipping-methods,
+.wc_payment_methods {
   list-style: none;
-  margin: 0;
+  margin-left: 0;
+  margin-bottom: 1.5em;
   padding: 0;
 }
 
@@ -530,6 +532,18 @@ form.woocommerce-cart-form {
 
 .shipping-calculator-button:hover, .shipping-calculator-button:focus {
   color: #111;
+}
+
+.wc_payment_method img {
+  max-height: 24px;
+}
+
+.payment_method_tinkoff label > * {
+  display: inline-block;
+}
+
+.woocommerce-privacy-policy-link {
+  border-bottom: 1px dotted #D1A579;
 }
 
 @media (max-width: 760px) {
