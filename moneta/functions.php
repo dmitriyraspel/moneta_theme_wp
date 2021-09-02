@@ -177,6 +177,7 @@ add_action( 'wp_enqueue_scripts', 'moneta_scripts' );
 function moneta_footer_scripts() {
 
 	wp_enqueue_script( 'moneta-exchange-js', get_template_directory_uri() . '/assets/js/exchange.js?45', array('jquery'), true );
+	wp_enqueue_script( 'moneta-tel-js', get_template_directory_uri() . '/assets/js/tel.js', array(), true );
 
 	if ( is_shop() ) {
 		wp_enqueue_script( 'moneta-shop-filters-js', get_template_directory_uri() . '/assets/js/shop-filters.js?4', array(), true );
