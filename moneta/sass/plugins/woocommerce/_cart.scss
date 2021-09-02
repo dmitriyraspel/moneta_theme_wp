@@ -151,7 +151,11 @@ form.woocommerce-cart-form {
         }
     }
 }
-
+.woocommerce-shipping-methods {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 .shipping-calculator-button {
     color: $text-dark;
     border-bottom: 1px dotted $gold;
@@ -161,6 +165,7 @@ form.woocommerce-cart-form {
         color: $text-dark;
     }
 }
+
 
 @media ( max-width: $tablet-width ) {
     .woocommerce-cart-form__cart-item  {
