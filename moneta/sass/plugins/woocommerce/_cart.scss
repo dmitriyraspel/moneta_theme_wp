@@ -152,6 +152,15 @@ form.woocommerce-cart-form {
     }
 }
 
+.shipping-calculator-button {
+    color: $text-dark;
+    border-bottom: 1px dotted $gold;
+    
+    &:hover,
+    &:focus {
+        color: $text-dark;
+    }
+}
 
 @media ( max-width: $tablet-width ) {
     .woocommerce-cart-form__cart-item  {

@@ -517,6 +517,15 @@ form.woocommerce-cart-form {
   max-width: 100%;
 }
 
+.shipping-calculator-button {
+  color: #111;
+  border-bottom: 1px dotted #D1A579;
+}
+
+.shipping-calculator-button:hover, .shipping-calculator-button:focus {
+  color: #111;
+}
+
 @media (max-width: 760px) {
   .woocommerce-cart-form__cart-item {
     display: -webkit-box;
